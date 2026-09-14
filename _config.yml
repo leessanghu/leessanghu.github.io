@@ -1,0 +1,9 @@
+title: "Minkyung's Research Log"
+description: "Diffusion, Memorization, DiT and Trustworthy AI"
+url: "https://leesanghu.github.io"
+baseurl: ""
+markdown: kramdown
+permalink: /paper/:title/
+future: true
+exclude: [README.md]
+

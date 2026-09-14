@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M15 43V21h7l10 13 10-13h7v22h-7V31L32 44 22 31v12z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</head>
+<body>
+  <button class="menu-button" id="menuButton" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+  {% include sidebar.html %}
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="{{ '/' | relative_url }}" class="wordmark">MINKYUNG / LOG</a>
+      <div class="top-actions">
+        <button class="search-button" id="searchButton" aria-label="검색 열기">⌕ <span>Search</span></button>
+        <a href="https://github.com/leesanghu" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </header>
+    <main>{{ content }}</main>
+  </div>
+  <div class="search-overlay" id="searchOverlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-label="논문 검색">
+      <div class="search-head"><span>Search papers</span><button id="closeSearch" aria-label="검색 닫기">Esc</button></div>
+      <input id="searchInput" type="search" placeholder="제목이나 태그를 입력하세요" autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+  <script id="searchData" type="application/json">[
+  {% for post in site.posts %}{"title":{{ post.title | jsonify }},"url":{{ post.url | relative_url | jsonify }},"tags":{{ post.tags | join: ' ' | jsonify }},"excerpt":{{ post.excerpt | strip_html | strip_newlines | truncate: 130 | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]</script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<aside class="sidebar" id="sidebar">
+  <a class="identity" href="{{ '/' | relative_url }}">
+    <span class="identity-mark">ML</span>
+    <span><strong>Minkyung Lee</strong><small>AI Research Notes</small></span>
+  </a>
+  <nav aria-label="Research navigation">
+    <p class="nav-label">Library</p>
+    <a href="{{ '/' | relative_url }}" class="nav-link">All papers <span>{{ site.posts.size }}</span></a>
+    <a href="{{ '/about/' | relative_url }}" class="nav-link">Research map</a>
+    <p class="nav-label">Topics</p>
+    {% assign topics = "Diffusion,Memorization,DiT,Diffusion + RL,Trustworthy AI" | split: "," %}
+    {% for topic in topics %}
+      <a href="{{ '/' | relative_url }}?topic={{ topic | url_encode }}" class="nav-link topic-link" data-topic="{{ topic }}">{{ topic }}</a>
+    {% endfor %}
+  </nav>
+  <div class="sidebar-foot"><span class="status-dot"></span> Learning in public</div>
+</aside>
+

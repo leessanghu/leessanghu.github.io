@@ -1,2 +1,5 @@
-# Paper Review
-AI / Diffusion Model/ Foundation Model / Multimodal
+---
+layout: home
+title: Paper Reviews
+---
+
