@@ -1,4 +1,4 @@
-# Minkyung Research Notes
+# Research Notes
 
 GitHub Pages용 Jekyll 연구노트입니다.
 
