@@ -1,7 +1,7 @@
 ---
 title: "Optimal Robust Memorization with ReLU Neural Networks"
 description: "ReLU 신경망의 robust memorization에 대해 O(Nn) 파라미터로 optimal robust memorization이 가능함을 constructive하게 증명합니다."
-date: 2024-01-02
+date: 2026-07-07
 tags: [Memorization, Optimization]
 venue: ICLR 2024 Spotlight
 authors: Lijia Yu, Xiaoshan Gao, Lijun Zhang
