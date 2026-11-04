@@ -8,9 +8,12 @@
     <a href="{{ '/' | relative_url }}" class="nav-link">All papers <span>{{ site.posts.size }}</span></a>
     <a href="{{ '/about/' | relative_url }}" class="nav-link">Research map</a>
     <p class="nav-label">Topics</p>
-    {% assign topics = "Diffusion,RL,Computer Vision, Trustworthy AI" | split: "," %}
-    {% for topic in topics %}
-      <a href="{{ '/' | relative_url }}?topic={{ topic | url_encode }}" class="nav-link topic-link" data-topic="{{ topic }}">{{ topic }}</a>
+    {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+    {% for tag in all_tags %}
+      {% assign tag = tag | strip %}
+      {% if tag != "" %}
+      <a href="{{ '/' | relative_url }}?topic={{ tag | url_encode }}" class="nav-link topic-link" data-topic="{{ tag }}">{{ tag }}</a>
+      {% endif %}
     {% endfor %}
   </nav>
   <div class="sidebar-foot"><span class="status-dot"></span> Learning in public</div>
