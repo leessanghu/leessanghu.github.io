@@ -2,7 +2,7 @@
 title: "Consistent Noisy Latent Rewards for Trajectory Preference Optimization in Diffusion Models"
 description: "Noisy latent에서 일관된 reward를 학습하고, diffusion trajectory 전체를 preference optimization에 활용하는 방법을 정리합니다."
 date: 2026-09-15
-tags: [Diffusion, RL, PreferenceOptimization, DiT, SLRM]
+tags: [Diffusion, RL, Preference]
 venue: ICLR 2026
 authors: Xiaole Xian et al.
 ---

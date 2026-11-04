@@ -2,7 +2,7 @@
 title: "Exploring Local Memorization in Diffusion Models via Bright Ending Attention"
 description: "End 토큰의 비정상적 attention(Bright Ending)이 Memorization의 신호임을 발견하고, 이를 Mask로 활용해 local memorization 영역을 pixel 단위로 localize합니다."
 date: 2025-01-02
-tags: [Diffusion, Memorization, Attention, TrustworthyAI, StableDiffusion]
+tags: [Diffusion, Memorization, CV]
 venue: ICLR 2025 Spotlight
 authors: Chen Chen et al.
 ---

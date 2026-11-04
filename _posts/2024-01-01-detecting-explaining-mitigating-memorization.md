@@ -2,7 +2,7 @@
 title: "Detecting, Explaining, and Mitigating Memorization in Diffusion Models"
 description: "프롬프트의 트리거 단어가 Memorization을 유발함을 발견하고, Gradient 기반 탐지와 prompt embedding 최적화로 완화하는 방법을 제안합니다."
 date: 2024-01-01
-tags: [Diffusion, Memorization, TrustworthyAI, StableDiffusion]
+tags: [Diffusion, Memorization]
 venue: ICLR 2024
 authors: Yuxin Wen et al.
 ---
