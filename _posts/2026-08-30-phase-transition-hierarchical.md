@@ -1,7 +1,7 @@
 ---
 title: "A Phase Transition in Diffusion Models Reveals the Hierarchical Nature of Data"
 description: "Diffusion backward process에 phase transition이 존재함을 보이며, 모델이 high-level feature와 low-level feature를 서로 다른 시간 스케일에서 처리함을 규명합니다."
-date: 2024-02-26
+date: 2026-08-30
 tags: [Diffusion, CV]
 venue: PNAS 2025
 authors: Antonio Sclocchi, Alessandro Favero, Matthieu Wyart
