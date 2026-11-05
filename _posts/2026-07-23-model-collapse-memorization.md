@@ -1,7 +1,7 @@
 ---
 title: "A Closer Look at Model Collapse: From a Generalization-to-Memorization Perspective"
 description: "자기 소비 루프에서 Memorization이 어떻게 전이되는지 분석하고, 데이터셋 Entropy를 최대화해 Model Collapse를 완화하는 방법을 제안합니다."
-date: 2025-01-01
+date: 2026-07-23
 tags: [Diffusion, Memorization]
 venue: NeurIPS 2025 Spotlight
 authors: Lianghe Shi et al.
