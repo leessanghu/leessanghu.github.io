@@ -1,7 +1,7 @@
 ---
 title: "Diffusion Models Preferentially Memorize Prototypical Examples"
 description: "Common한 sub-feature를 많이 가진 prototypical 샘플이 먼저 암기됨을 발견하고, 부분 암기까지 같은 메커니즘으로 설명합니다."
-date: 2026-01-01
+date: 2026-08-29
 tags: [Diffusion, Memorization]
 venue: ICML 2026
 authors: Marta Aparicio Rodriguez et al.
