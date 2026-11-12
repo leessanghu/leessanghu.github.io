@@ -120,4 +120,24 @@ $$
 
 ## 3. Experiments
 
+기본 base model은 SD3.5에서 시작한다. Task의 종류로는 GenEval, OCR, Preference이다. Teacher모델을 훈련시키는 데이터셋으로는 FlowGRPO에서 분할한 GenEval과 OCR, 그리고 Preference는 Pick-a-Pic데이터셋을 사용한다. 
+
+- 각 Teacher모델 파인튜닝 RL 방법
+  1. Aesthetics Teacher -> GRPO-Guard
+  2. OCR Teacher -> GRPO-Guard
+  3. GenEval Teacher -> DiffusionNFT
+
+- Baseline 모델
+  1. Single-task Teachers
+  2. Multi-task RL
+     - Task별 배치별로 교대해서 모델 학습
+  3. Cascade NFT
+     - 하나의 task끝나면 다음 task업데이트
+
+
+ ## 4. Result
+<img width="734" height="236" alt="image" src="https://github.com/user-attachments/assets/15f87622-e6f3-4e3e-b6d2-dcaecb2375af" />
+
+기본 모델보단 월등히 뛰어나고 task특화 teacher모델들의 성능을 거의 그대로 혹은 좀 더 높게 증류된것을 확인
+
 
