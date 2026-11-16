@@ -136,6 +136,7 @@ $$
 
 
  ## 4. Result
+ 
 <img width="734" height="236" alt="image" src="https://github.com/user-attachments/assets/15f87622-e6f3-4e3e-b6d2-dcaecb2375af" />
 
 기본 모델보단 월등히 뛰어나고 task특화 teacher모델들의 성능을 거의 그대로 혹은 좀 더 높게 증류된것을 확인
