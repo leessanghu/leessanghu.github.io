@@ -15,7 +15,6 @@ authors: QUANHAO LI et al.
 일반적인 OPD Loss 식은 다음과 같다.
 
 $$
-\
 \mathcal L_{\mathrm{OPD}}(\theta)
 =\mathbb E_{\tau\sim p_{S,\theta}}
 \left[
@@ -27,7 +26,6 @@ p_S(\cdot|x_{t_j})
 p_T(\cdot|x_{t_j})
 \right)
 \right]
-\
 $$ 
 
 본 논문에선 이 식이 아닌 더 구체화해서 사용할 예정이다.
@@ -38,7 +36,6 @@ $$
 
  
 $$
-\
 \boxed{
 x_{t_{j+1}}
 =x_{t_j}
@@ -54,7 +51,6 @@ x_{t_j}+(1-t_j)v_j^S
 +
 \sigma_{t_j}\sqrt{-\Delta t_j}\,\epsilon_j
 }
-\
 $$
 
 - Velocity에 따라 determinstic 하게 결정되는 이동량
@@ -63,12 +59,10 @@ $$
 Student와 Teacher은 동일한 Scheduler와 Noise level을 사용하기 때문에 Corvariance가 같다.
 
 $$ 
-\
 \begin{aligned}
 p_S &= \mathcal N(\mu_S,\bar{\sigma}_j^2I_d)\\
 p_T &= \mathcal N(\mu_T,\bar{\sigma}_j^2I_d)
 \end{aligned}
-\
 $$ 
 
 ### 2. Closed-Form Reverse KL between Same-Covariance Gaussians
@@ -76,7 +70,6 @@ $$
 동일한 Corvariance를 갖는 d차원의 Gaussian Distribution KL Divergence는 다음과 같다.
 
 $$ 
-\
 D_{\mathrm{KL}}
 \left(
 \mathcal N(\mu_1,\Sigma)
@@ -85,7 +78,6 @@ D_{\mathrm{KL}}
 \right)
 =\frac12(\mu_1-\mu_2)^\top
 \Sigma^{-1}(\mu_1-\mu_2)
-\
 $$
 
 이 위에 식을 기반으로 최종 SDE OPD Loss식은 다음과같다.
@@ -97,13 +89,11 @@ $$
 OPE OPD Loss 식은 다음과 같다.
 
 $$
-\
 \mathcal L_{\mathrm{ODE}}
 =\mathbb E\left[
 \sum_j
 \frac12\|\mu_S-\mu_T\|_2^2
 \right]
-\
 $$
 
 
